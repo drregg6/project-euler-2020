@@ -51,7 +51,8 @@ const largestProduct = limit => {
   let arrNum = arrStr.map(num => parseInt(num));
   
   let largestProduct = 1;
-  for (let i = 0; i <= arrNum.length; i++) {
+  let maxLoop = arrNum.length - limit;
+  for (let i = 0; i <= maxLoop; i++) {
     let tempProduct = 1;
     let count = 0;
     while (count < limit) {
