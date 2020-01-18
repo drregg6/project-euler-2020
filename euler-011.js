@@ -122,8 +122,3 @@ const countGrid = arr => {
     console.log(arr[i].length);
   }
 }
-console.log(getLargestRowProduct(grid));
-console.log(getLargestColProduct(grid));
-console.log(getLargestDiaRightProduct(grid));
-console.log(getLargestDiaLeftProduct(grid));
-console.log(largestProductInGrid(grid));
