@@ -47,7 +47,7 @@ const findTheLongestRepeat = max => {
     if (howManyRepeats(count) > result) {
       result = count;
     }
-    count = count + 2;
+    count = count + 2; // it will never be an even num
   }
   return result;
 }
