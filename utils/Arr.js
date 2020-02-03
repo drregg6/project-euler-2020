@@ -1,5 +1,6 @@
-const Arr = function() {
+module.exports = Arr = (() => {
   const sumOfArr = arr => arr.reduce((a,b) => a+b);
+  const quotientOfArr = arr => arr.reduce((a,b) => a/b);
 
   const combiningArrs = (...arguments) => {
     let arr = [];
@@ -11,8 +12,7 @@ const Arr = function() {
 
   return {
     sumOfArr,
+    quotientOfArr,
     combiningArrs
   }
-}
-
-module.exports = Arr();
+})();

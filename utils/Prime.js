@@ -1,4 +1,4 @@
-const Prime = function() {
+module.exports = Prime = (() => {
   const isPrime = num => {
     if (num <= 1) return false;
     if (num <= 3) return true;
@@ -13,6 +13,4 @@ const Prime = function() {
   return {
     isPrime
   }
-}
-
-module.exports = Prime();
+})();
