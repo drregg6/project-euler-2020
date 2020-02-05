@@ -1,11 +1,13 @@
 module.exports = Num = (() => {
+  const isEven = num => num % 2 === 0;
+
   const separateNumToArr = num => {
     let str = num.toString();
     let arr = [...str];
     return arr.map(str => parseInt(str));
   }
 
-  const convertNumToBigInt = num => BigInt(num);
+  const convertToBigInt = num => BigInt(num);
 
   const listTheDivisors = num => {
     let max = Math.floor(num/2);
@@ -42,9 +44,10 @@ module.exports = Num = (() => {
   }
 
   return {
+    isEven,
     factorial,
     separateNumToArr,
-    convertNumToBigInt,
+    convertToBigInt,
     listTheDivisors,
     areUniqueNums
   }
