@@ -32,7 +32,17 @@ module.exports = Num = (() => {
     return true;
   }
 
+  const factorial = num => {
+    let res = 1;
+    while (num > 1) {
+      res *= num;
+      num--;
+    }
+    return res;
+  }
+
   return {
+    factorial,
     separateNumToArr,
     convertNumToBigInt,
     listTheDivisors,
