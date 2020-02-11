@@ -43,12 +43,18 @@ module.exports = Num = (() => {
     return res;
   }
 
+  const numLength = num => {
+    const strNum = num.toString();
+    return strNum.length;
+  }
+
   return {
     isEven,
     factorial,
     separateNumToArr,
     convertToBigInt,
     listTheDivisors,
-    areUniqueNums
+    areUniqueNums,
+    numLength
   }
 })();

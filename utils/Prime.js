@@ -13,7 +13,18 @@ module.exports = Prime = (() => {
     }
     return true;
   }
+
+  const generatePrimes = terms => {
+    let results = [];
+    let count = 2;
+    while (results.length !== terms) {
+      if (isPrime(count)) results.push(count);
+      count++;
+    }
+    return results;
+  }
   return {
-    isPrime
+    isPrime,
+    generatePrimes
   }
 })();

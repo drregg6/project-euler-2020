@@ -12,6 +12,7 @@ Find the product abc.
 
 const squared = num => num**2;
 const isInt = num => Number.isInteger(num);
+
 function isNaturalSeq() {
   let solution = true;
   let args = [...arguments];
@@ -41,9 +42,16 @@ const findTheTriplet = () => {
       const { a, b, c } = generateTriplet(i, j);
       if (isNaturalSeq(a, b, c)) {
         if ((a + b + c) === 1000) {
-          return a * b * c;
+          return {
+            a,
+            b,
+            c,
+            product: a * b * c
+          };
         }
       }
     }
   }
 }
+
+console.log(findTheTriplet())
